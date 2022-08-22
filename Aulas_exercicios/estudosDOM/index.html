@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body{
+            background-color: rgb(55, 144, 173);
+            color: white;
+            font: normal 1em arial;
+        }
+    </style> 
+</head>
+<body>
+    <h1>Iniciando com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
+    <div name="msgDois">Clique Aqui</div>
+    <div id="msg">Clique em mim</div>
+    <div class="msgTres">Clique</div>
+    <div id="msgQuatro">Não clique</div>
+
+    <script>
+        // manipulando componentes do DOM
+        var corpo = window.document.body
+
+        corpo.style.background = 'black'
+
+        //para métodos no plural : []-> indica posição da tag que quer selecionar/ qual componente quer acessar
+
+        //seleção por marca(tag)
+        var p1 = window.document.getElementsByTagName('p')[0]
+
+         //seleção por Classe
+         var c = window.document.getElementsByClassName('msgTres')[0]
+         c.innerText = "Olá classe"
+
+         //seleção por ID
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'olá ID'
+
+        //d.innerText = 'estou aguardando..' ou
+        window.document.getElementById('msg').innerText = 'olá'
+
+        //seleção por nome
+        var n = window.document.getElementsByName('msgDois')[0]
+        n.innerText = 'olá nome'
+
+        // #->id .->classe
+        //seleção por seletor
+        var s = window.document.querySelector('div#msgQuatro')
+        s.style.color = 'blue'
+
+        //possivel obter informações do site
+        window.document.write(window.navigator.appName)
+        window.document.write(window.document.URL)
+        window.document.write(window.document.charset)
+        
+    </script>
+</body>
+</html>
