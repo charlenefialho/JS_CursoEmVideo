@@ -18,13 +18,15 @@
     <p>Aqui vai o resultado</p>
 
     <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
-    <div name="msgDois">Clique Aqui</div>
+    <div>Clique em mim</div>
     <div id="msg">Clique em mim</div>
+    <div name="msgDois">Clique Aqui</div>
     <div class="msgTres">Clique</div>
-    <div id="msgQuatro">Não clique</div>
+    <div class="msgTres">Não clique</div>
 
     <script>
-        // manipulando componentes do DOM
+        
+       // manipulando componentes do DOM
         var corpo = window.document.body
 
         corpo.style.background = 'black'
@@ -41,10 +43,10 @@
          //seleção por ID
         var d = window.document.getElementById('msg')
         d.style.background = 'green'
-        d.innerText = 'olá ID'
+        d.innerText = 'olá id'
 
         //d.innerText = 'estou aguardando..' ou
-        window.document.getElementById('msg').innerText = 'olá'
+        window.document.getElementById('msg').innerText = 'olá id'
 
         //seleção por nome
         var n = window.document.getElementsByName('msgDois')[0]
@@ -52,7 +54,7 @@
 
         // #->id .->classe
         //seleção por seletor
-        var s = window.document.querySelector('div#msgQuatro')
+        var s = window.document.querySelector('div.msgTres')
         s.style.color = 'blue'
 
         //possivel obter informações do site
